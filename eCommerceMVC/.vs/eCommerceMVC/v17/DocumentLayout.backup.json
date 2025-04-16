@@ -1,0 +1,126 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\omer\\source\\repos\\eCommerceMVC\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9D6B1B48-C911-4A9D-8958-D03F8AE67B78}|eCommerceMVC\\MVC.csproj|c:\\users\\omer\\source\\repos\\ecommercemvc\\ecommercemvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D6B1B48-C911-4A9D-8958-D03F8AE67B78}|eCommerceMVC\\MVC.csproj|solutionrelative:ecommercemvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAD359B7-926A-4715-920B-9EC604D63FC2}|Service\\Service.csproj|c:\\users\\omer\\source\\repos\\ecommercemvc\\service\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAD359B7-926A-4715-920B-9EC604D63FC2}|Service\\Service.csproj|solutionrelative:service\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58DB396C-9367-4F63-B776-F28C13BD4E17}|DataAccess\\DataAccess.csproj|c:\\users\\omer\\source\\repos\\ecommercemvc\\dataaccess\\context\\ecommercedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58DB396C-9367-4F63-B776-F28C13BD4E17}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\context\\ecommercedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAD359B7-926A-4715-920B-9EC604D63FC2}|Service\\Service.csproj|c:\\users\\omer\\source\\repos\\ecommercemvc\\service\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAD359B7-926A-4715-920B-9EC604D63FC2}|Service\\Service.csproj|solutionrelative:service\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33859E12-6AEC-4C47-ABB5-C010B9D66BA2}|Application\\Application.csproj|c:\\users\\omer\\source\\repos\\ecommercemvc\\application\\repositories\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33859E12-6AEC-4C47-ABB5-C010B9D66BA2}|Application\\Application.csproj|solutionrelative:application\\repositories\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33859E12-6AEC-4C47-ABB5-C010B9D66BA2}|Application\\Application.csproj|c:\\users\\omer\\source\\repos\\ecommercemvc\\application\\services\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33859E12-6AEC-4C47-ABB5-C010B9D66BA2}|Application\\Application.csproj|solutionrelative:application\\services\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "eCommerceDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\omer\\source\\repos\\eCommerceMVC\\DataAccess\\Context\\eCommerceDbContext.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Context\\eCommerceDbContext.cs",
+              "ToolTip": "C:\\Users\\omer\\source\\repos\\eCommerceMVC\\DataAccess\\Context\\eCommerceDbContext.cs",
+              "RelativeToolTip": "DataAccess\\Context\\eCommerceDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T14:41:46.731Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\omer\\source\\repos\\eCommerceMVC\\Service\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "Service\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\omer\\source\\repos\\eCommerceMVC\\Service\\Services\\UserService.cs",
+              "RelativeToolTip": "Service\\Services\\UserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwCEAAABdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T14:11:44.891Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\omer\\source\\repos\\eCommerceMVC\\eCommerceMVC\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "eCommerceMVC\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\omer\\source\\repos\\eCommerceMVC\\eCommerceMVC\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "eCommerceMVC\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACoAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T14:05:54.969Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ServiceRegistration.cs",
+              "DocumentMoniker": "C:\\Users\\omer\\source\\repos\\eCommerceMVC\\Service\\ServiceRegistration.cs",
+              "RelativeDocumentMoniker": "Service\\ServiceRegistration.cs",
+              "ToolTip": "C:\\Users\\omer\\source\\repos\\eCommerceMVC\\Service\\ServiceRegistration.cs",
+              "RelativeToolTip": "Service\\ServiceRegistration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T13:20:41.887Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IProductRepository.cs",
+              "DocumentMoniker": "C:\\Users\\omer\\source\\repos\\eCommerceMVC\\Application\\Repositories\\IProductRepository.cs",
+              "RelativeDocumentMoniker": "Application\\Repositories\\IProductRepository.cs",
+              "ToolTip": "C:\\Users\\omer\\source\\repos\\eCommerceMVC\\Application\\Repositories\\IProductRepository.cs",
+              "RelativeToolTip": "Application\\Repositories\\IProductRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T13:19:29.777Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IProductService.cs",
+              "DocumentMoniker": "C:\\Users\\omer\\source\\repos\\eCommerceMVC\\Application\\Services\\IProductService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\IProductService.cs",
+              "ToolTip": "C:\\Users\\omer\\source\\repos\\eCommerceMVC\\Application\\Services\\IProductService.cs",
+              "RelativeToolTip": "Application\\Services\\IProductService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T13:19:18.246Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
