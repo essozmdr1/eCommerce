@@ -13,7 +13,7 @@ builder.Services.AddServiceRegister();
 builder.Services.AddDbContext<eCommerceDbContext>(b => 
 b.UseFirebird(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-builder.Services.AddIdentity<AppUser,IdentityRole>().AddEntityFrameworkStores<eCommerceDbContext>();
+builder.Services.AddIdentity<AppUser,AppRole>().AddEntityFrameworkStores<eCommerceDbContext>();
 
 var app = builder.Build();
 

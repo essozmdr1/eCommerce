@@ -21,6 +21,21 @@ namespace DataAccess.Migrations
                 .HasAnnotation("ProductVersion", "9.0.3")
                 .HasAnnotation("Relational:MaxIdentifierLength", 31);
 
+            modelBuilder.Entity("CommentProduct", b =>
+                {
+                    b.Property<Guid>("CommentsId")
+                        .HasColumnType("CHAR(16) CHARACTER SET OCTETS");
+
+                    b.Property<Guid>("ProductsId")
+                        .HasColumnType("CHAR(16) CHARACTER SET OCTETS");
+
+                    b.HasKey("CommentsId", "ProductsId");
+
+                    b.HasIndex("ProductsId");
+
+                    b.ToTable("CommentProduct");
+                });
+
             modelBuilder.Entity("Entity.Entities.AppRole", b =>
                 {
                     b.Property<string>("Id")
@@ -109,6 +124,168 @@ namespace DataAccess.Migrations
                         .HasDatabaseName("UserNameIndex");
 
                     b.ToTable("AspNetUsers", (string)null);
+                });
+
+            modelBuilder.Entity("Entity.Entities.Basket", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("CHAR(16) CHARACTER SET OCTETS");
+
+                    b.Property<DateTime>("BasketAddedDate")
+                        .HasColumnType("TIMESTAMP");
+
+                    b.Property<decimal>("Discount")
+                        .HasColumnType("DECIMAL(18,2)");
+
+                    b.Property<bool>("IsPayment")
+                        .HasColumnType("BOOLEAN");
+
+                    b.Property<Guid>("ProductId")
+                        .HasColumnType("CHAR(16) CHARACTER SET OCTETS");
+
+                    b.Property<decimal>("Total")
+                        .HasColumnType("DECIMAL(18,2)");
+
+                    b.Property<int>("Unit")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("Baskets");
+                });
+
+            modelBuilder.Entity("Entity.Entities.Comment", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("CHAR(16) CHARACTER SET OCTETS");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("BLOB SUB_TYPE TEXT");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("BLOB SUB_TYPE TEXT");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("BLOB SUB_TYPE TEXT");
+
+                    b.Property<DateTime>("WriteDate")
+                        .HasColumnType("TIMESTAMP");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Comments");
+                });
+
+            modelBuilder.Entity("Entity.Entities.Discount", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("CHAR(16) CHARACTER SET OCTETS");
+
+                    b.Property<decimal>("DiscountRate")
+                        .HasColumnType("DECIMAL(18,2)");
+
+                    b.Property<Guid>("OptionId")
+                        .HasColumnType("CHAR(16) CHARACTER SET OCTETS");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OptionId");
+
+                    b.ToTable("Discounts");
+                });
+
+            modelBuilder.Entity("Entity.Entities.Option", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("CHAR(16) CHARACTER SET OCTETS");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("BLOB SUB_TYPE TEXT");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("BLOB SUB_TYPE TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Options");
+                });
+
+            modelBuilder.Entity("Entity.Entities.Order", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("CHAR(16) CHARACTER SET OCTETS");
+
+                    b.Property<Guid>("BasketId")
+                        .HasColumnType("CHAR(16) CHARACTER SET OCTETS");
+
+                    b.Property<bool>("IsComplete")
+                        .HasColumnType("BOOLEAN");
+
+                    b.Property<DateTime>("OrderCreatedDate")
+                        .HasColumnType("TIMESTAMP");
+
+                    b.Property<string>("OrderStatus")
+                        .IsRequired()
+                        .HasColumnType("BLOB SUB_TYPE TEXT");
+
+                    b.Property<DateTime>("OrderUpdatedDate")
+                        .HasColumnType("TIMESTAMP");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BasketId");
+
+                    b.ToTable("Orders");
+                });
+
+            modelBuilder.Entity("Entity.Entities.Payment", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("CHAR(16) CHARACTER SET OCTETS");
+
+                    b.Property<string>("CVV")
+                        .IsRequired()
+                        .HasColumnType("BLOB SUB_TYPE TEXT");
+
+                    b.Property<DateTime>("CreadtedDate")
+                        .HasColumnType("TIMESTAMP");
+
+                    b.Property<string>("CreditCartNumber")
+                        .IsRequired()
+                        .HasColumnType("BLOB SUB_TYPE TEXT");
+
+                    b.Property<string>("ExpireDate")
+                        .IsRequired()
+                        .HasColumnType("BLOB SUB_TYPE TEXT");
+
+                    b.Property<bool>("IsPaymentSuccess")
+                        .HasColumnType("BOOLEAN");
+
+                    b.Property<string>("NameLastName")
+                        .IsRequired()
+                        .HasColumnType("BLOB SUB_TYPE TEXT");
+
+                    b.Property<Guid>("OrderId")
+                        .HasColumnType("CHAR(16) CHARACTER SET OCTETS");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OrderId");
+
+                    b.ToTable("Payments");
                 });
 
             modelBuilder.Entity("Entity.Entities.Product", b =>
@@ -236,6 +413,80 @@ namespace DataAccess.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("OptionProduct", b =>
+                {
+                    b.Property<Guid>("OptionsId")
+                        .HasColumnType("CHAR(16) CHARACTER SET OCTETS");
+
+                    b.Property<Guid>("ProductsId")
+                        .HasColumnType("CHAR(16) CHARACTER SET OCTETS");
+
+                    b.HasKey("OptionsId", "ProductsId");
+
+                    b.HasIndex("ProductsId");
+
+                    b.ToTable("OptionProduct");
+                });
+
+            modelBuilder.Entity("CommentProduct", b =>
+                {
+                    b.HasOne("Entity.Entities.Comment", null)
+                        .WithMany()
+                        .HasForeignKey("CommentsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Entity.Entities.Product", null)
+                        .WithMany()
+                        .HasForeignKey("ProductsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Entity.Entities.Basket", b =>
+                {
+                    b.HasOne("Entity.Entities.Product", "Product")
+                        .WithMany("Baskets")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("Entity.Entities.Discount", b =>
+                {
+                    b.HasOne("Entity.Entities.Option", "Option")
+                        .WithMany("Discounts")
+                        .HasForeignKey("OptionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Option");
+                });
+
+            modelBuilder.Entity("Entity.Entities.Order", b =>
+                {
+                    b.HasOne("Entity.Entities.Basket", "Basket")
+                        .WithMany("Orders")
+                        .HasForeignKey("BasketId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Basket");
+                });
+
+            modelBuilder.Entity("Entity.Entities.Payment", b =>
+                {
+                    b.HasOne("Entity.Entities.Order", "Order")
+                        .WithMany("Payments")
+                        .HasForeignKey("OrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Order");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Entity.Entities.AppRole", null)
@@ -285,6 +536,41 @@ namespace DataAccess.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("OptionProduct", b =>
+                {
+                    b.HasOne("Entity.Entities.Option", null)
+                        .WithMany()
+                        .HasForeignKey("OptionsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Entity.Entities.Product", null)
+                        .WithMany()
+                        .HasForeignKey("ProductsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Entity.Entities.Basket", b =>
+                {
+                    b.Navigation("Orders");
+                });
+
+            modelBuilder.Entity("Entity.Entities.Option", b =>
+                {
+                    b.Navigation("Discounts");
+                });
+
+            modelBuilder.Entity("Entity.Entities.Order", b =>
+                {
+                    b.Navigation("Payments");
+                });
+
+            modelBuilder.Entity("Entity.Entities.Product", b =>
+                {
+                    b.Navigation("Baskets");
                 });
 #pragma warning restore 612, 618
         }

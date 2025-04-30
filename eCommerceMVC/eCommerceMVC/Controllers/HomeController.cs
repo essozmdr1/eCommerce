@@ -3,6 +3,7 @@ using System.Diagnostics;
 using Application.Services;
 using eCommerceMVC.Models;
 using Entity.Dtos;
+using Entity.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,44 +11,22 @@ namespace eCommerceMVC.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IUserService _userService;
+       
+        private readonly IProductService _productService;
 
-        public HomeController(IUserService userService)
+        public HomeController(IProductService productService)
         {
-            _userService = userService;
+            _productService = productService;
         }
 
-       public async Task<IActionResult> Index()
-       {
+        public async Task<IActionResult> Index()
 
-            RegisterDto registerDto = new()
-            {
-               Email = "esra@gmail.com",
-               Password = "Esra.1234",
-               UserName = "tsaydam"
-            };
-            await _userService.CreateUser(registerDto);
+        {
 
-             registerDto = new()
-            {
-                Email = "emir@gmail.com",
-                Password = "Emir.1234",
-                UserName = "emir"
-            };
+            var result = _productService.GetProducts();
+            return View(result);
 
-            await _userService.CreateUser(registerDto);
-
-            registerDto = new()
-            {
-                Email = "osman@gmail.com",
-                Password = "Osman.1234",
-                UserName = "osman"
-            };
-
-            await _userService.CreateUser(registerDto);
-            return View();
-
-       }
+        }
 
 
     }
