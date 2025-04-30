@@ -39,9 +39,3 @@ Bu projede, markaların kendi ürünlerini sisteme ekleyerek ürün özellikleri
 
 
 
-
----
-
-## 📂 Kurulum
-
-1. Bu projeyi klonlayın:
